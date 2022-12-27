@@ -2,13 +2,6 @@
     <div class="post-header">
         <span class="ui-tips"><%- __('common.title') + __('symbol.colon')%></span>
         <h1 class="ui-keyword post-title"><%- page.title || '(empty)' %></h1>
-         <% if (theme.history_control.enable) {
-                    let repertory_address = `${theme.history_control.server_link}/${theme.history_control.user}/${theme.history_control.repertory}`;
-                    let file_path = `${theme.history_control.branch}/source/${page.source}`;%>
-                    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/raw/${file_path}` %>'> Source </a>
-                    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/edit/${file_path}` %>'> Edit </a>
-                    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/commits/${file_path}` %>'> History </a>
-                <% } %>
     </div>
     <% if (page.categories && page.categories.length) { %>
     <div class="post-header">
@@ -20,12 +13,21 @@
     <% } %>
     <% if (page.tags && page.tags.length) { %>
     <div class="post-header">
-        <span class="ui-tips"><%- __('common.tag') + __('symbol.colon')%></span>
+        <span class="ui-tips"><%- __('Tags') + __('symbol.colon')%></span>
         <% page.tags.forEach(tag => { %>
         <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
         <% }) %>
     </div>
     <% } %>
+    <div class="post-header">
+    <span class="ui-tips"><%- __('Git') + __('symbol.colon')%></span>
+    <% if (theme.history_control.enable) {
+    let file_path = `${theme.history_control.branch}/source/${page.source}`;%>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/raw/${file_path}` %>'> Source </a>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/edit/${file_path}` %>'> Edit </a>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/commits/${file_path}` %>'> History </a>
+    <% } %>
+    </div>
     <% if (page.photos && page.photos.length) { %>
     <div class="post-content">
         <% page.photos.forEach(photo => { %>
