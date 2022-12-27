@@ -1,6 +1,7 @@
 title: Terminal Theme for Hexo
 menus:
   home: /
+  new_article: https://github.com/anthonyrussano/anthonyrussano-com/new/main/source/_posts
 favicon: https://res.cloudinary.com/alchemist-cookbook/image/upload/v1637641842/ssh.png
 # footers:
 #   /index.html: /
