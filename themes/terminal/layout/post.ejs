@@ -20,12 +20,12 @@
     </div>
     <% } %>
     <div class="post-header">
-    <span class="ui-tips"><%- __('Git') + __('symbol.colon')%></span>
+    <span class="ui-tips"><%- __('Revisions') + __('symbol.colon')%></span>
     <% if (theme.history_control.enable) {
     let file_path = `${theme.history_control.branch}/source/${page.source}`;%>
-    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/raw/${file_path}` %>'> Source </a>
-    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/edit/${file_path}` %>'> Edit </a>
-    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/commits/${file_path}` %>'> History </a>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/raw/${file_path}` %>'>Source</a>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/edit/${file_path}` %>'>Edit</a>
+    <a href='<%= theme.history_control.server_link %><%= theme.history_control.user %>/<%= theme.history_control.repertory %><%= `/commits/${file_path}` %>'>History</a>
     <% } %>
     </div>
     <% if (page.photos && page.photos.length) { %>
