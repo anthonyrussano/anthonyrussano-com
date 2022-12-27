@@ -4,3 +4,9 @@ menus:
 favicon: https://res.cloudinary.com/alchemist-cookbook/image/upload/v1637641842/ssh.png
 # footers:
 #   /index.html: /
+history_control: # make you wiki has history version control in page
+    enable: true
+    server_link: "https://github.com/" # recommend use GitHub https://github.com
+    user: anthonyrussano
+    repertory: anthonyrussano-com
+    branch: main
