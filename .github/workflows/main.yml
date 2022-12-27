@@ -21,6 +21,7 @@ jobs:
         git checkout main
         git pull
         rm -Rf public
+        npm install
         hexo generate
     - name: commit inception level three
       uses: EndBug/add-and-commit@v9
