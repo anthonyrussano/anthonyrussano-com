@@ -1,10 +1,9 @@
 title: Terminal Theme for Hexo
 menus:
   home: /
-  new_article: https://github.com/anthonyrussano/anthonyrussano-com/new/main/source/_posts
 favicon: https://res.cloudinary.com/alchemist-cookbook/image/upload/v1637641842/ssh.png
-# footers:
-#   /index.html: /
+footers:
+  create_new_article: https://github.com/anthonyrussano/anthonyrussano-com/new/main/source/_posts
 history_control: # make you wiki has history version control in page
     enable: true
     server_link: "https://github.com/" # recommend use GitHub https://github.com
