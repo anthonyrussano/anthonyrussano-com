@@ -21,7 +21,7 @@ jobs:
       run: |
         git checkout main
         git pull
-        # rm -Rf public
+        rm -Rf public
         npm install
         hexo generate
     - name: commit inception level three
